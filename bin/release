@@ -1,7 +1,7 @@
 #!/usr/bin/env bash
 cat << EOF
-cp /app/vendor/libsndfile/include/* /usr/share/R/include
-cp /app/vendor/libsndfile/lib/* /usr/share/R/lib
+#cp /app/vendor/libsndfile/include/* /usr/share/R/include
+#cp /app/vendor/libsndfile/lib/* /usr/share/R/lib
 
 ---
 config_vars:
