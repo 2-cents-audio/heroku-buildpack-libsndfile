@@ -9,7 +9,6 @@ mkdir -p vendor/libsndfile
 # untar the binary to the directory we want
 tar -C vendor/libsndfile -xvf libsndfile.tar.gz
 # make directories to copy lib files
-mkdir -p /usr/share/R
 mkdir -p /usr/share/R/include
 mkdir -p /usr/share/R/lib
 # copy files to R directory for gcc
