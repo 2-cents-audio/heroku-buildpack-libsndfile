@@ -9,4 +9,4 @@ mkdir -p vendor/libsndfile
 # untar the binary to the directory we want
 tar -C vendor/libsndfile -xvf libsndfile.tar.gz
 # prepend path
-export PATH=$BUILD_DIR/.heroku/vendor/libsndfile:$BUILD_DIR/.heroku/vendor/libsndfile/include:$BUILD_DIR/.heroku/vendor/libsndfile/lib:$BUILD_DIR/.heroku/vendor/libsndfile/bin:$BUILD_DIR/.heroku/vendor/bin:$PATH
+export PATH=/app/vendor/libsndfile/bin:/app/vendor/libsndfile/include:/app/vendor/libsndfile/lib:/app/vendor/libsndfile:$BUILD_DIR/.heroku/vendor/libsndfile:$BUILD_DIR/.heroku/vendor/libsndfile/include:$BUILD_DIR/.heroku/vendor/libsndfile/lib:$BUILD_DIR/.heroku/vendor/libsndfile/bin:$BUILD_DIR/.heroku/vendor/bin:$PATH
