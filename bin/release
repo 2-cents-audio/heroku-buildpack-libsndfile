@@ -1,6 +1,9 @@
 #!/usr/bin/env bash
 cat << EOF
+cp /app/vendor/libsndfile/include/* /usr/share/R/include
+cp /app/vendor/libsndfile/lib/* /usr/share/R/lib
+
 ---
 config_vars:
-PATH: $PATH:/app/vendor/libsndfile/bin:/app/vendor/libsndfile/include:/app/vendor/libsndfile/lib:/app/vendor/libsndfile
+PATH: $PATH:/app/vendor/libsndfile/bin
 EOF
