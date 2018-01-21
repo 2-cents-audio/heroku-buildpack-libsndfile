@@ -64,5 +64,5 @@ cp -R "$BUILD_DIR/" $2
 mkdir /app/vendor/libsndfile
 mkdir /app/vendor/libsndfile/include
 mkdir /app/vendor/libsndfile/lib
-cp $2/vendor/bin/libsndfile/include/*.* /app/vendor/libsndfile/include
-cp $2/vendor/bin/libsndfile/lib/*.* /app/vendor/libsndfile/lib
+cp $BUILD_DIR/libsndfile/include/*.* /app/vendor/libsndfile/include
+cp $BUILD_DIR/libsndfile/lib/*.* /app/vendor/libsndfile/lib
