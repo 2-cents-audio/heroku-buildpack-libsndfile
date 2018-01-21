@@ -8,5 +8,8 @@ curl https://s3.amazonaws.com/libsndfile-binary/libsndfile.tar.gz -s -O
 mkdir -p vendor/libsndfile
 # untar the binary to the directory we want
 tar -C vendor/libsndfile -xvf libsndfile.tar.gz
+# copy files to R directory for gcc
+cp vendor/libsndfile/include/* /usr/share/R/include
+cp vendor/libsndfile/lib/* /usr/share/R/lib
 # prepend path
-export PATH=/app/vendor/libsndfile/bin:/app/vendor/libsndfile/include:/app/vendor/libsndfile/lib:/app/vendor/libsndfile:$BUILD_DIR/.heroku/vendor/libsndfile:$BUILD_DIR/.heroku/vendor/libsndfile/include:$BUILD_DIR/.heroku/vendor/libsndfile/lib:$BUILD_DIR/.heroku/vendor/libsndfile/bin:$BUILD_DIR/.heroku/vendor/bin:$PATH
+#export PATH=/app/vendor/libsndfile/bin:/app/vendor/libsndfile/include:/app/vendor/libsndfile/lib:/app/vendor/libsndfile:$BUILD_DIR/.heroku/vendor/libsndfile:$BUILD_DIR/.heroku/vendor/libsndfile/include:$BUILD_DIR/.heroku/vendor/libsndfile/lib:$BUILD_DIR/.heroku/vendor/libsndfile/bin:$BUILD_DIR/.heroku/vendor/bin:$PATH
