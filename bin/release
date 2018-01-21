@@ -2,5 +2,5 @@
 cat << EOF
 ---
 config_vars:
-PATH: $PATH:/app/vendor/libsndfile/bin
+PATH: $PATH:/app/vendor/libsndfile/bin:/app/vendor/libsndfile/include:/app/vendor/libsndfile/lib:/app/vendor/libsndfile
 EOF
