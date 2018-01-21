@@ -8,6 +8,10 @@ curl https://s3.amazonaws.com/libsndfile-binary/libsndfile.tar.gz -s -O
 mkdir -p vendor/libsndfile
 # untar the binary to the directory we want
 tar -C vendor/libsndfile -xvf libsndfile.tar.gz
+# make directories to copy lib files
+mkdir -p /usr/share/R
+mkdir -p /usr/share/R/include
+mkdir -p /usr/share/R/lib
 # copy files to R directory for gcc
 cp vendor/libsndfile/include/* /usr/share/R/include
 cp vendor/libsndfile/lib/* /usr/share/R/lib
