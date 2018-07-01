@@ -80,10 +80,10 @@ mkdir -p $2
 cp -R "$BUILD_DIR/" $2
 
 mkdir /app/vendor/Mesa-10.1.0
-#mkdir /app/vendor/Mesa-10.1.0/include
+mkdir /app/vendor/Mesa-10.1.0/include
 #mkdir /app/vendor/Mesa-10.1.0/include/GL
 mkdir /app/vendor/Mesa-10.1.0/bin
-cp -r include /app/vendor/Mesa-10.1.0
+cp -r include /app/vendor/Mesa-10.1.0/include
 #cp $BUILD_DIR/Mesa-10.1.0/include/GL/*.* /app/vendor/Mesa-10.1.0/include/GL
 cp ./bin/*.* /app/vendor/Mesa-10.1.0/bin
 
