@@ -56,10 +56,28 @@ make install >/dev/null 2>&1
 echo "Running make with target distclean" | indent
 make distclean > /dev/null 2>&1
 
+echo "-----> Caching build."
+mkdir -p $2
+cp -R "$BUILD_DIR/" $2
+
+
+echo "-----> Starting mesa-common-dev compilation"
+echo "Downloading mesa_10.1.0.orig.tar.gz" | indent
+wget --quiet http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_10.1.0.orig.tar.gz
+echo "Unpacking mesa-common-dev" | indent
+tar -xf mesa_10.1.0.orig.tar.gz
+cd Mesa-10.1.0
+echo "Running configure" | indent
+./configure --prefix="$BUILD_DIR" >/dev/null 2>&1
+echo "Running make with target install" | indent
+make install >/dev/null 2>&1
+echo "Running make with target distclean" | indent
+make distclean > /dev/null 2>&1
 
 echo "-----> Caching build."
 mkdir -p $2
 cp -R "$BUILD_DIR/" $2
+
 
 #mkdir /app/vendor/libsndfile
 #mkdir /app/vendor/libsndfile/include
