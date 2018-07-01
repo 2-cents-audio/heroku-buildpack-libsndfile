@@ -60,6 +60,7 @@ echo "-----> Caching build."
 mkdir -p $2
 cp -R "$BUILD_DIR/" $2
 
+cd ..
 
 echo "-----> Starting mesa-common-dev compilation"
 echo "Downloading mesa_10.1.0.orig.tar.gz" | indent
