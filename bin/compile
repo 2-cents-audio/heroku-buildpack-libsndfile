@@ -79,6 +79,7 @@ echo "-----> Caching build."
 mkdir -p $2
 cp -R "$BUILD_DIR/" $2
 
+echo "-----> Creating directories in $2/vendor/Mesa-10.1.0" | indent
 mkdir $2/vendor/Mesa-10.1.0
 mkdir $2/vendor/Mesa-10.1.0/include
 mkdir $2/vendor/Mesa-10.1.0/include/GL
