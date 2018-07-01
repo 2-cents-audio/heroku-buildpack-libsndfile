@@ -85,10 +85,10 @@ mkdir /app/vendor/Mesa-10.1.0/include/GL
 mkdir /app/vendor/Mesa-10.1.0/include/GL/internal
 mkdir /app/vendor/Mesa-10.1.0/bin
 #cp include /app/vendor/Mesa-10.1.0/include
-cp $BUILD_DIR/Mesa-10.1.0/include/GL/*.* /app/vendor/Mesa-10.1.0/include/GL
-cp $BUILD_DIR/Mesa-10.1.0/include/GL/internal/*.* /app/vendor/Mesa-10.1.0/include/GL/internal
-cp $BUILD_DIR/Mesa-10.1.0/include/GL/*.* /app/vendor/Mesa-10.1.0/include
-cp $BUILD_DIR/Mesa-10.1.0/bin/*.* /app/vendor/Mesa-10.1.0/bin
+cp ./include/GL/*.* /app/vendor/Mesa-10.1.0/include/GL
+cp ./include/GL/internal/*.* /app/vendor/Mesa-10.1.0/include/GL/internal
+cp ./include/GL/*.* /app/vendor/Mesa-10.1.0/include
+cp ./bin/*.* /app/vendor/Mesa-10.1.0/bin
 
 
 #mkdir /app/vendor/libsndfile
