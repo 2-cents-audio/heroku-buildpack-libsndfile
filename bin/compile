@@ -78,6 +78,14 @@ echo "-----> Caching build."
 mkdir -p $2
 cp -R "$BUILD_DIR/" $2
 
+mkdir /app/vendor/Mesa-10.1.0
+mkdir /app/vendor/Mesa-10.1.0/include
+mkdir /app/vendor/Mesa-10.1.0/include/GL
+mkdir /app/vendor/Mesa-10.1.0/bin
+cp $BUILD_DIR/Mesa-10.1.0/include/*.* /app/vendor/Mesa-10.1.0/include
+cp $BUILD_DIR/Mesa-10.1.0/include/GL/*.* /app/vendor/Mesa-10.1.0/include/GL
+cp $BUILD_DIR/Mesa-10.1.0/bin/*.* /app/vendor/Mesa-10.1.0/bin
+
 
 #mkdir /app/vendor/libsndfile
 #mkdir /app/vendor/libsndfile/include
