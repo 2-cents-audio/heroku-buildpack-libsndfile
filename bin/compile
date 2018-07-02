@@ -79,17 +79,17 @@ echo "-----> Caching build."
 mkdir -p $2
 cp -R "$BUILD_DIR/" $2
 
-echo "-----> Creating directories in $2/vendor/Mesa-10.1.0" | indent
-mkdir $2/vendor/Mesa-10.1.0
-mkdir $2/vendor/Mesa-10.1.0/include
-mkdir $2/vendor/Mesa-10.1.0/include/GL
-mkdir $2/vendor/Mesa-10.1.0/include/GL/internal
-mkdir $2/vendor/Mesa-10.1.0/bin
+echo "-----> Creating directories in /app/vendor/Mesa-10.1.0" | indent
+mkdir /app/vendor/Mesa-10.1.0
+mkdir /app/vendor/Mesa-10.1.0/include
+mkdir /app/vendor/Mesa-10.1.0/include/GL
+mkdir /app/vendor/Mesa-10.1.0/include/GL/internal
+mkdir /app/vendor/Mesa-10.1.0/bin
 #cp include /app/vendor/Mesa-10.1.0/include
-cp ./include/GL/*.* $2/vendor/Mesa-10.1.0/include/GL
-cp ./include/GL/internal/*.* $2/vendor/Mesa-10.1.0/include/GL/internal
-cp ./include/GL/*.* $2/vendor/Mesa-10.1.0/include
-cp ./bin/*.* $2/vendor/Mesa-10.1.0/bin
+cp ./include/GL/*.* /app/vendor/Mesa-10.1.0/include/GL
+cp ./include/GL/internal/*.* /app/vendor/Mesa-10.1.0/include/GL/internal
+cp ./include/GL/*.* /app/vendor/Mesa-10.1.0/include
+cp ./bin/*.* /app/vendor/Mesa-10.1.0/bin
 
 
 #mkdir /app/vendor/libsndfile
