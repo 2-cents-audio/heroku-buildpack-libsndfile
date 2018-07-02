@@ -62,34 +62,34 @@ cp -R "$BUILD_DIR/" $2
 
 cd ..
 
-echo "-----> Starting mesa-common-dev compilation"
-echo "Downloading mesa_10.1.0.orig.tar.gz" | indent
-wget --quiet http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_10.1.0.orig.tar.gz
-echo "Unpacking mesa-common-dev" | indent
-tar -xf mesa_10.1.0.orig.tar.gz
-cd Mesa-10.1.0
-echo "Running configure" | indent
-./configure --prefix="$BUILD_DIR" >/dev/null 2>&1
-echo "Running make with target install" | indent
-make install >/dev/null 2>&1
-echo "Running make with target distclean" | indent
-make distclean > /dev/null 2>&1
+#echo "-----> Starting mesa-common-dev compilation"
+#echo "Downloading mesa_10.1.0.orig.tar.gz" | indent
+#wget --quiet http://archive.ubuntu.com/ubuntu/pool/main/m/mesa/mesa_10.1.0.orig.tar.gz
+#echo "Unpacking mesa-common-dev" | indent
+#tar -xf mesa_10.1.0.orig.tar.gz
+#cd Mesa-10.1.0
+#echo "Running configure" | indent
+#./configure --prefix="$BUILD_DIR" >/dev/null 2>&1
+#echo "Running make with target install" | indent
+#make install >/dev/null 2>&1
+#echo "Running make with target distclean" | indent
+#make distclean > /dev/null 2>&1
 
-echo "-----> Caching build."
-mkdir -p $2
-cp -R "$BUILD_DIR/" $2
+#echo "-----> Caching build."
+#mkdir -p $2
+#cp -R "$BUILD_DIR/" $2
 
-echo "-----> Creating directories in /app/vendor/mesadev" | indent
-mkdir /app/vendor/mesadev
-mkdir /app/vendor/mesadev/include
-mkdir /app/vendor/mesadev/include/GL
-mkdir /app/vendor/mesadev/include/GL/internal
-mkdir /app/vendor/mesadev/bin
-#cp include /app/vendor/mesadev/include
-cp ./include/GL/*.* /app/vendor/mesadev/include/GL
-cp ./include/GL/internal/*.* /app/vendor/mesadev/include/GL/internal
-cp ./include/GL/*.* /app/vendor/mesadev/include
-cp ./bin/*.* /app/vendor/mesadev/bin
+#echo "-----> Creating directories in /app/vendor/mesadev" | indent
+#mkdir /app/vendor/mesadev
+#mkdir /app/vendor/mesadev/include
+#mkdir /app/vendor/mesadev/include/GL
+#mkdir /app/vendor/mesadev/include/GL/internal
+#mkdir /app/vendor/mesadev/bin
+##cp include /app/vendor/mesadev/include
+#cp ./include/GL/*.* /app/vendor/mesadev/include/GL
+#cp ./include/GL/internal/*.* /app/vendor/mesadev/include/GL/internal
+#cp ./include/GL/*.* /app/vendor/mesadev/include
+#cp ./bin/*.* /app/vendor/mesadev/bin
 
 
 #mkdir /app/vendor/libsndfile
